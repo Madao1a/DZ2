@@ -11,9 +11,12 @@ if (number == 5) Console.WriteLine ("не выходной");
 if (number == 6) Console.WriteLine ("выходной");
 if (number == 7) Console.WriteLine ("выходной");*/
 
-Console.WriteLine ("Введите число ");
+Console.WriteLine ("Введите день недели ");
 int number = int.Parse (Console.ReadLine());
-while (true)
+while (number < 1 || number > 7)
 {
-    
+    Console.WriteLine ("Дни недели имеют порядковые номера от 1 до 7, введите повторно ");
+    number = int.Parse (Console.ReadLine());
 }
+if (number >= 1 && number <=5) Console.WriteLine ("не выходной");
+if (number == 7 || number == 6) Console.WriteLine ("выходной");
